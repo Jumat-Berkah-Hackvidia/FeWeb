@@ -3,14 +3,14 @@ import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { LogOut } from "lucide-react";
-import AIDorseLogo from "@/assets/AIDorseLogo.png";
+import AIDorseLogo from "@/assets/AIDorseLogo.png"; // pastikan path sesuai
 
 const Navbar: React.FC = () => {
   const { user, logout } = useAuth();
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-[#3E54AC] shadow-md border-b border-[#2e3b8e]">
+    <nav className="bg-[#3E54AC] shadow-sm border-b border-[#2e3b8e]">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
@@ -55,9 +55,7 @@ const Navbar: React.FC = () => {
                   Dashboard
                 </Link>
                 <div className="flex items-center space-x-2">
-                  <span className="text-sm text-white/80 hidden sm:inline">
-                    {user.email}
-                  </span>
+                  <span className="text-sm text-white/80">{user.email}</span>
                   <Button
                     variant="ghost"
                     size="icon"

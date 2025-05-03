@@ -23,7 +23,6 @@ const About: React.FC = () => {
           style={{ backgroundImage: "url('/path/to/your/image.jpg')" }}
         ></div>
         <div className="relative z-10 text-center">
-          <img src={AIDorseLogo} alt="AIDorse Logo" className="w-24" />
           <h1 className="text-4xl font-extrabold">AIDORSE</h1>
           <p className="mt-4 text-lg">
             Revolutionizing Product Brief Creation with AI
