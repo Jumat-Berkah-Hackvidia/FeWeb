@@ -159,7 +159,7 @@ const Influencers: React.FC = () => {
   };
 
   return (
-    <div className="page-container">
+    <div className="page-container mt-20">
       <Button
         variant="outline"
         size="sm"
@@ -249,7 +249,13 @@ const Influencers: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredInfluencers.length > 0 ? (
             filteredInfluencers.map((influencer) => (
-              <Card key={influencer.id} className="overflow-hidden">
+              <Card
+                key={influencer.id}
+                className="overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
+                onClick={() =>
+                  navigate("/artisprofile", { state: { influencer } })
+                }
+              >
                 <div className="flex">
                   <div className="w-1/3">
                     <img
@@ -307,7 +313,10 @@ const Influencers: React.FC = () => {
                       <Button
                         size="sm"
                         variant="outline"
-                        onClick={() => handleContactInfluencer(influencer)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleContactInfluencer(influencer);
+                        }}
                         className="w-full"
                       >
                         Contact

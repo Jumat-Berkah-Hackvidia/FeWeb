@@ -15,7 +15,10 @@ import Register from "./pages/register";
 import Dashboard from "./pages/Dashboard";
 import CreateBrief from "./pages/CreateBrief";
 import Influencers from "./pages/Influencers";
-import ArtistProfile from "./pages/ArtisProfile"; // Ensure this is imported correctly
+import ArtistProfile from "./pages/ArtisProfile";
+import Agreement from "./pages/Agreement";
+import Payment from "./pages/payment";
+import PaymentSuccess from "./pages/paymentSucces";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -59,9 +62,19 @@ const App = () => (
                     </ProtectedRoute>
                   }
                 />
+                <Route
+                  path="/artisprofile"
+                  element={
+                    <ProtectedRoute>
+                      <ArtistProfile />
+                    </ProtectedRoute>
+                  }
+                />
+
                 {/* Ensure the influencer profile page is properly routed */}
-                <Route path="/influencer/:id" element={<ArtistProfile />} />
-                <Route path="*" element={<NotFound />} />
+                <Route path="/agreement" element={<Agreement />} />
+                <Route path="/payment" element={<Payment />} />
+                <Route path="/paymentsucces" element={<PaymentSuccess />} />
               </Routes>
             </main>
           </div>

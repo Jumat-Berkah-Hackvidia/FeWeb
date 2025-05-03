@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   const { user } = useAuth();
 
   return (
-    <div className="min-h-screen pt-[60px]">
+    <div className="min-h-screen pt-[70px]">
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-[#3E54AC] to-[#5C73DF] text-white py-20">
         <div className="container mx-auto px-4 text-center">

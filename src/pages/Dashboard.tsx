@@ -35,7 +35,7 @@ const Dashboard: React.FC = () => {
           </CardHeader>
           <CardContent>
             <div className="flex items-center justify-center py-8">
-              <FileText className="h-16 w-16 text-brand-400" />
+              <FileText className="h-16 w-16 text-blue" />
             </div>
           </CardContent>
           <CardFooter>
@@ -55,7 +55,7 @@ const Dashboard: React.FC = () => {
           </CardHeader>
           <CardContent>
             <div className="flex items-center justify-center py-8">
-              <Search className="h-16 w-16 text-brand-400" />
+              <Search className="h-16 w-16 text-blue" />
             </div>
           </CardContent>
           <CardFooter>
